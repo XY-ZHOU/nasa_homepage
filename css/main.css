@@ -15,7 +15,10 @@ ul {
 li {
   list-style: none;
 }
-
+a{
+  text-decoration: none;
+  color: #fff;
+}
 .clearfix:after {
   content: " ";
   display: block;
@@ -47,13 +50,12 @@ img, video {
 }
 
 /*header*/
-
 .header {
   height: 150px;
 }
 
 .header_fixed {
-  background: url('images/starfield-banner.jpg ');
+  background: url('../images/starfield_banner.jpg ');
   position: fixed;
   z-index: 999;
   width: 95%;
@@ -90,7 +92,7 @@ img, video {
 
 .nav_top_list li {
   padding: 0px 10px;
-  margin: 8px 0;
+  margin: 8px 0px;
   height: 38px;
   line-height: 38px;
   font-size: 18px;
@@ -155,7 +157,6 @@ img, video {
 }
 
 /*main*/
-
 .top_main, .middle_main, .bottom_main {
   display: flex;
   margin: 12px 0px;
@@ -284,6 +285,8 @@ img, video {
 }
 
 .footer_content_right_list li {
-  color: #1f4389;
   padding: 5px 10px;
+}
+.footer_content_right_list li a{
+  color: #1f4389;
 }
