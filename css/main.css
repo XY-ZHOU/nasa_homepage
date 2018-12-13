@@ -1,215 +1,289 @@
-body, div, ul, li, p, h1, h2, h3, h4 {
-  margin: 0;
-  padding: 0;
-  font-size: 12px;
-}
-ul, li{
-  list-style: none;
-}
-body{
+body {
   background-color: black;
   width: 95%;
   margin: auto;
   color: #fff;
+  font-size: 12px;
 }
+
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+li {
+  list-style: none;
+}
+
 .clearfix:after {
   content: " ";
   display: block;
-  height: 0;
+  height: 0px;
   clear: both;
   visibility: hidden;
 }
+
 .clearfix {
   zoom: 1;
 }
-.fl {
+
+.float_left {
   float: left;
 }
-.fr {
+
+.float_right {
   float: right;
 }
-div{
+
+div {
   box-sizing: border-box;
+  overflow: hidden;
 }
-img{
-  width:100%;
-  height:100%;
+
+img, video {
+  width: 100%;
+  height: 100%;
 }
-/*header部分样式*/
-#header{
+
+/*header*/
+
+.header {
   height: 150px;
 }
-#header_fixed{
+
+.header_fixed {
   background: url('images/starfield-banner.jpg ');
   position: fixed;
   z-index: 999;
   width: 95%;
   margin-bottom: 10px;
 }
-#header_logo {
+
+.header_background {
+  z-index: -20;
+  position: absolute;
+}
+
+.header_logo {
   padding: 10px;
 }
-#logo {
+
+.logo {
   width: 100px;
   margin: 10px;
 }
-#header_nav {
+
+.header_nav {
   color: #fff;
   padding-left: 20px;
 }
-#nav_top {
-  margin:20px 0;
-  height: 50px;
+
+.nav_top {
+  margin: 22px 0px;
 }
-#nav_bottom {
+
+.nav_bottom {
   background-color: #565656;
   z-index: 1;
 }
-#nav_top_list li{
-  padding: 0 10px;
-  margin: 10px 0;
-  height:35px;
-  line-height: 35px;
+
+.nav_top_list li {
+  padding: 0px 10px;
+  margin: 8px 0;
+  height: 38px;
+  line-height: 38px;
   font-size: 18px;
   border-right: 2px solid #545454;
   box-sizing: border-box;
 }
-#nav_top_list li:last-child {
+
+.nav_top_list li:last-child, .nav_bottom_list li:last-child {
   border-right: none;
 }
-#nav_bottom_list li {
-  padding: 0 10px;
-  margin: 10px 0;
-   height:20px;
-   line-height: 20px;
-   font-size: 14px;
+
+.nav_bottom_list li {
+  padding: 0px 10px;
+  margin: 8px 0;
+  height: 27px;
+  line-height: 27px;
+  font-size: 14px;
   border-right: 1px solid #818181;
 }
-#search_box{
-  margin:30px 0px 0px 20px;
-  position: relative;
+
+.search_box {
+  margin: 30px 0px 0px 20px;
 }
-#search_input{
-  padding-left:15px;
+
+.search_input {
+  padding-left: 15px;
   width: 170px;
   height: 35px;
   border: none;
-  background:#333333;
-  color:#757575;
+  background: #333333;
+  color: #fff;
 }
-#search_icon{
-  background: url(images/search.svg) no-repeat;
-  z-index: 1;
-  width: 35px;
-  height: 35px;
-  position: absolute;
-  top: 0px;
-  right: 0;
+
+.search_input::-webkit-input-placeholder {
+  color: #757575;
 }
-#share_icon{
-  background: url(images/share.svg) no-repeat;
-  z-index: 1;
-  width: 35px;
-  height: 35px;
-  margin-left:20px;
-  position: absolute;
-  top: 0px;
-  right: -40px;
+
+.search_input::-webkit-input-placeholder {
+  color: #757575;
 }
-/*main部分样式*/
-#top_main,
-#middle_main,
-#top_main_right_top,
-#bottom_main{
+
+.search_input::-moz-placeholder {
+  color: #757575;
+}
+
+.search_input:-ms-input-placeholder {
+  color: #757575;
+}
+
+.search_icon {
+  width: 37px;
+  height: 37px;
+  display: inline-block;
+  margin: 0px 0px -13px -40px;
+}
+
+.share_icon {
+  display: inline-block;
+  width: 37px;
+  height: 37px;
+  margin-bottom: -13px;
+}
+
+/*main*/
+
+.top_main, .middle_main, .bottom_main {
   display: flex;
+  margin: 12px 0px;
 }
-#top_main>div,
-#top_main_right_top>div,
-#middle_main>div,
-#bottom_main>div{
-  margin:7px;
-  justify-content:space-between;
+
+.top_main>div, .middle_main>div, .bottom_main>div {
+  justify-content: space-between;
   flex: 1;
   position: relative;
 }
-#middle_main #asteroids{
+
+.top_main_right_top {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.middle_main .asteroids {
   flex: 2;
 }
-#nasa_tv_schedule{
-  background-color:#46719B;
-  padding:10px;
-  line-height:20px;
-}
-#schedule_title{
-  font-size:14px;
-  border-bottom:1px solid #fff;
-}
-#schedule_content{
-  height:100%;
-  padding-bottom:30px;
+
+.dusk_for_dawn, .climate, .image_of_the_day, .about_nasa {
+  margin-right: 7px;
 }
 
-#schedule_end{
+.asteroids, .juno, .cassini {
+  margin: 0px 7px;
+}
+
+.top_main_right, .nasa_video, .fermi_space_telescope {
+  margin-left: 7px;
+}
+
+.top_main_right_top>div {
+  justify-content: space-between;
+  flex: 1;
+  position: relative;
+}
+
+.nasa_tv_schedule {
+  background-color: #46719B;
+  margin-left: 7px;
+  padding: 10px;
+  line-height: 20px;
+}
+
+.schedule_title {
+  font-size: 14px;
+  border-bottom: 1px solid #fff;
+}
+
+.schedule_content {
+  height: 100%;
+  padding-bottom: 30px;
+}
+
+.schedule_end {
   width: 100%;
-  border-top:1px solid #fff;
+  border-top: 1px solid #fff;
   height: 20px;
-  margin-top: -30px;
+  margin-top: -35px;
+}
 
+.schedule_end p {
+  margin: 0px;
 }
-#nasa_video{
-  width:100%;
-  height:100%;
+
+.about_nasa {
+  background: #242424;
 }
-#about_nasa{
-  background:#242424;
-}
-.pic_content{
+
+.pic_content {
   z-index: 200;
   bottom: 0;
   opacity: 0.9;
   width: 100%;
   position: absolute;
 }
-.pic_title{
-  padding:10px;
+
+.pic_title {
+  padding: 10px;
+  margin: 0px;
   display: inline-block;
   font-size: 16px;
   background: #556D9B;
 }
-.pic_txt{
+
+.pic_txt {
   padding: 5px;
+  margin: 0px;
   font-size: 14px;
   background: #D2D2D2;
   color: #000;
   line-height: 25px;
-  font-weight:bold;
+  font-weight: bold;
 }
-/*footer部分样式*/
-#footer{
-  height:200px;
+
+/*footer*/
+
+.footer {
+  height: 200px;
   color: #fff;
   font-weight: bold;
 }
-#footer_title{
-  height:38px;
+
+.footer_title {
+  height: 38px;
   line-height: 38px;
-  font-size:14px;
+  font-size: 14px;
   text-align: center;
   background-color: #1d4187;
-  margin:10px 0 30px 0px;
+  margin: 10px 0px 30px 0px;
 }
-#footer_content_left_logo{
-  width:70px;
-  height:70px;
+
+.footer_content_left_logo {
+  width: 70px;
+  height: 70px;
   margin-right: 20px;
 }
-#footer_content_left_txt{
+
+.footer_content_left_txt {
   font-size: 14px;
 }
-#footer_content_right_list{
+
+.footer_content_right_list {
   text-align: right;
 }
-#footer_content_right_list li{
-  color:#1f4389;
-  padding:5px 10px;
+
+.footer_content_right_list li {
+  color: #1f4389;
+  padding: 5px 10px;
 }
